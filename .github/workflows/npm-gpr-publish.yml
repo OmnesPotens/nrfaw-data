@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: 16
       - run: npm install
-      - run: npm ci
 
   publish-npm:
     needs: build
@@ -27,13 +26,18 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: npm install
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/setup-node@v3
         with:
           registry-url: 'https://npm.pkg.github.com'
+      - run: npm install
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
