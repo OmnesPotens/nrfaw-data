@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/OmnesPotens/nrfaw-data",
   "scripts": {
+    "build-gpr": "node ./.github/gpr-publishing.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
