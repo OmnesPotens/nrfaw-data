@@ -1,7 +1,7 @@
 {
   "name": "lancer-nrfaw-data",
   "version": "1.0.8",
-  "description": "Player-side COMP/CON data from 'No Room For A Wallflower', a LANCER narrative for the LANCER TTRPG",
+  "description": "Player-facing COMP/CON data from 'No Room For A Wallflower', a LANCER narrative for the LANCER TTRPG",
   "main": "index.js",
   "repository": {
     "type": "git",
